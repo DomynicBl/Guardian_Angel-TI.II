@@ -1,0 +1,213 @@
+/*Login*/
+.main_login{
+    width: 100vw;
+    height: 100vh;
+    background: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Div Login*/
+.area_login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Area Login*/
+.card_login{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    box-shadow: 1px 1px 20px var();
+    background-color: var(--cor-primaria); 
+}
+
+/*Titulo Login*/
+.card_login h1{
+    color: var(--cor-texto);
+    font-weight: 800;
+}
+
+/*Logo Login*/
+.card_login img{
+    width: 120px;
+    object-fit: cover;
+}
+
+/*Campos Login*/
+.campos_login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    color: var(--cor-texto_2);
+}
+
+/*Inputs Login*/
+.campos_login input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 12pt;
+
+    outline: none;
+    box-sizing: border-box;
+    background-color: var(--cor-texto);
+    color: var(--cor-texto_2);
+}
+
+/*Placeholder Inputs Login*/
+.campos_login input::placeholder{
+    color: var(--cor-texto_2)
+}
+
+/*Titulo dos Imputs*/
+.campos_login label{
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/*Div Botão Login*/
+.full-box{
+    width: 100%;
+}
+
+/*Botão Login*/
+.btn_login{
+    width: 100%;
+    padding: 16px 0px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--cor-texto);
+    background-color: var(--cor-terciaria);
+    box-shadow: 1px 1px 20px var(--sombra-cor);
+    cursor: pointer;
+}
+
+/*Link Fazer Cadastro*/
+.cadastro a{
+    color: var(--cor-texto_2);
+    text-decoration: none;
+}
+/*Fim Login*/
+
+/*------------------------------------------------------------------------------------*/
+
+/*Cadastro*/
+
+
+.main_cadastro{
+    width: 100vw;
+    height: 100vh;
+    background: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Div Cadastro*/
+.area_cadastro{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Area Cadastro*/
+.card_cadastro{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    box-shadow: 1px 1px 20px var(--cor-primaria);
+    background-color: var(--cor-primaria); 
+    border-radius: 10px;   
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--cor-primaria);
+}
+
+/*Titulo Cadastro*/
+.card_cadastro h1{
+    color: var(--cor-texto);
+    font-weight: 800;
+}
+
+/*Logo Cadastro*/
+.card_cadastro img{
+    width: 120px;
+    object-fit: cover;
+}
+
+/*Campos Cadastro*/
+.campos_cadastro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+/*Inputs Cadastro*/
+.campos_cadastro input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+    background-color: var(--cor-texto);
+    color: var(--cor-texto_2);
+}
+
+/*Titulo dos Imputs*/
+.campos_cadastro label{
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/*Botão Cadastro*/
+.btn_cadastro{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--cor-texto);
+    background-color: var(--cor-terciaria);
+    cursor: pointer;
+}
+
+/*Link Login*/
+.login a{
+    color: var(--cor-texto_2);
+    text-decoration: none;
+}
+/*Fim Fazer Cadastro*/

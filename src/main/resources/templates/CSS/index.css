@@ -1,0 +1,334 @@
+
+/*Menu e Login*/
+
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--cor-texto);
+  padding: 1.2% 1%;
+  flex-direction: column;
+}
+
+.logo_text{
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--cor-texto);
+  text-decoration: none;
+  flex-direction: column;
+}
+
+
+
+
+* {
+  
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+.navbar{
+  height: 12%;
+}
+
+.navbar img{
+  width: 120px;
+  object-fit: cover;
+}
+
+.espaco-navbar {
+  margin-top: 70px;
+}
+
+.navitem {
+  overflow: hidden;
+  max-height: 30px;
+  max-width: 50px;
+  padding: 10px 50px 10px 50px;
+  font-size: 30px;
+  color: var(--cor-secundaria);
+}
+
+.navlogged {
+  padding: 10px 50px 10px 0px;
+  font-size: 18px;
+}
+
+.btnnavbar {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/*
+  WOMAN ANGEL
+*/
+
+.woman-angel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.woman-angel img {
+  margin-bottom: 10px;
+}
+
+/*
+  CORPO
+*/
+
+.aplicacoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  height: 10%;
+}
+
+.aplicacoes a {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-align: center;
+}
+
+/* botao de pesquisa */
+.btnnavbar {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--cor-secundaria);
+  width: 280px;
+  border: none;
+  background-color: var(--cor-primaria);
+  height: 40px;
+  border-radius: 6px;
+}
+
+/* botao de denuncia */
+.btncadastrar {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--cor-secundaria);
+  width: 280px;
+  border: none;
+  background-color: var(--cor-primaria);
+  height: 40px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* DESTAQUES */
+
+a {
+  text-decoration: none;
+}
+
+.pontosD {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.destaque {
+  margin-top: 30px;
+  border-radius: 10px;
+  min-height: calc(80vh - 30px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.destaque h1 {
+  margin: 10px;
+  color: var(--cor-primaria);
+  text-align: center;
+}
+
+.destacado {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--cor-secundaria);
+  border: 3px solid var(--cor-terciaria);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.destaque h2 {
+  text-align: center;
+  color: var(--cor-terciaria);
+  font-size: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--cor-quarternaria);
+}
+
+.destaque h3 {
+  text-align: center;
+  color: rgb(27, 27, 27);
+  font-size: 14px;
+}
+
+.destaque h4 {
+  color: var(--cor-primaria);
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.destaque h5 {
+  font-size: 20px;
+  text-align: center;
+  color: var(--cor-terciaria);
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+
+/*
+#destacados {
+  max-height: calc(50vh - 30px);
+  overflow-y: scroll;
+}
+*/
+
+/* MOTORISTAS */
+.motorista {
+  width: 80%;
+  max-height: calc(50vh - 30px);
+  overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.denuncia {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.denuncia .info {
+  font-weight: bold;
+  color: #ff1493;
+  margin-bottom: 10px;
+}
+
+.denuncia .descricao {
+  color: #555;
+}
+
+/*
+  RODAPÉ
+*/
+.rodape {
+  padding: 30px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  display: flex;
+  align-items: center;
+}
+
+.rodape .tipo{
+  display: inline-block;  
+}
+
+.rodape .tipo h1{
+  color: (var(--cor-quarternaria));
+  font-size: 14px;
+}
+
+.mensagem,
+.autores {
+  flex-basis: 50%;
+  text-align: center;
+  margin: 0;
+}
+
+
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 1201px) {
+  .destaque h3 {
+    font-size: 20px;
+  }
+
+  .destaque h2 {
+    font-size: 24px;
+  }
+
+  .woman-angel img {
+    width: 150px;
+  }
+
+  .woman-angel {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .destacado {
+    font-size: 200px;
+  }
+
+  .woman-angel img {
+    width: 100px;
+  }
+
+  .woman-angel {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .destacado {
+    font-size: 160px;
+  }
+
+  .woman-angel img {
+    width: 80px;
+  }
+
+  .woman-angel {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .destacado {
+    font-size: 160px;
+  }
+
+  .btnnavbar{
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+  }
+  .btncadastrar {
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .navitem {
+    padding: 10px 20px 10px 20px;
+    font-size: 25px;
+    color: var(--cor-secundaria);
+  }
+
+  .woman-angel img {
+    width: 70px;
+  }
+
+  .woman-angel {
+    font-size: 20px;
+  }
+}

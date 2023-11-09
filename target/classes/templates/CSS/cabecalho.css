@@ -1,0 +1,42 @@
+/* Cabeçalho */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor-texto);
+    background-color: var(--cor-primaria);
+    box-shadow: 1px 1px 30px var(--cor-sombra);;
+    padding: 1.2% 3%;
+  }
+  /* Fim - Cabeçalho */
+
+/*------------------------------------------------------------------------------------*/
+
+  /* Logo */
+  .logo_header img {
+    width: 150px;
+    object-fit: cover;
+  }
+  /* Fim - Logo */
+
+/*------------------------------------------------------------------------------------*/
+
+  /* Foto Usuario */
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+  }
+  
+  .menu img {
+    height: 59.21px;
+    object-fit: cover;
+  }
+
+  .menu a {
+    margin-left: 10px;
+  }
+  /* Fim - Foto Usuario */
+
+/*------------------------------------------------------------------------------------*/
+

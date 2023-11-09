@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Guardian Angel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="CSS/index.css" rel="stylesheet">
+  <link href="CSS/cabecalho.css" rel="stylesheet">
+  <link href="CSS/footer.css" rel="stylesheet">
+  <link href="CSS/reset.css" rel="stylesheet">
+  <link href="imgs/logo/White.png" rel="icon">
+  <script src="https://kit.fontawesome.com/525c49cbb7.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="imprimeDados()">
+
+<!------------------------------------------------------------------------------------>
+
+<!--Cabeçalho-->
+<div class="header" id="header">
+    <div class="logo_header">
+        <a href="index.html">
+            <img src="imgs/logo/White.png" alt="Login">
+        </a>
+    </div>  
+  
+    <div class="menu">
+        <a href="login.html">
+            <img src="imgs/cabecalho/usuario.png" alt="Usuário">
+        </a>
+    </div>
+</div>
+<!--Fim - Cabeçalho-->
+
+<!------------------------------------------------------------------------------------>
+
+<!---->
+  <div class="espaco-navbar"></div>
+
+  <div class="woman-angel"></div>
+
+  <!--Botoes - Procurar e Denunciar Pontos Perigosos-->
+  <div class="aplicacoes">
+    <a href="./pesquisa.html"><button class="btnnavbar">Procurar Ponto Perigoso</button></a>
+    <a href="./PontosPerigosos.html"><button class="btncadastrar">Denunciar Ponto Perigoso</button></a>
+  </div>
+  <!--Fim - Botoes-->
+
+  <div class="destaque">
+    <h1>EM ALTA</h1>
+    <div class="pontosD">
+      <div id="destacados"></div>
+    </div>
+
+  </div>
+
+<!------------------------------------------------------------------------------------>
+  
+<!--Rodape-->
+<main></main>
+<footer>
+    <div id="footer_content">
+        <div id="footer_contacts">
+            <h1>Contatos</h1>
+            <p>Telefone: 0800 777-1205</p>
+            <p>Email: guardian_angel@gmail.com</p>
+    
+            <div id="footer_social_media">
+                <a href="https://www.instagram.com/" class="footer-link" id="instagram" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    
+                <a href="https://www.facebook.com/" class="footer-link" id="facebook" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+    
+                <a href="https://www.whatsapp.com/" class="footer-link" id="whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+            </div>
+        </div>
+                
+        <ul class="footer-list">
+            <li>
+                <h3>Projeto</h3>
+            </li>
+            <li>
+                <li>
+                    <a href="#" class="footer-link">Guardian Angel - Webapp Final</a>
+                </li>
+                <li>
+                    <a href="https://www.pucminas.br/unidade/coracao-eucaristico/ensino/graduacao/Paginas/Ciencia-da-Computacao.aspx?moda=2&curso=180&local=ab23480c-5f60-4752-b990-1ac1cf9b8cf5" class="footer-link" target="_blank">2/2023 - Ciência da Computação</a>
+                </li>
+                <li>
+                    <a href="https://www.pucminas.br/destaques/Paginas/default.aspx" class="footer-link" target="_blank">Puc Minas - Coração Eucarístico</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Trabalho Interdisciplinar II Back-End</a>
+                </li>
+        </ul>
+    
+        <ul class="footer-list">
+            <li>
+                <h3>Autores</h3>
+            </li>
+            <li>    
+                <a href="https://github.com/arthursetragni" class="footer-link" target="_blank">Arthur Leite Setragni</a>
+            </li>
+            <li>
+                <a href="https://github.com/DomynicBl" class="footer-link" target="_blank">Domynic Barros Lima</a>
+            </li>
+            <li>
+                <a href="https://github.com/Gust4vinho07" class="footer-link" target="_blank">Gustavo Sales Santos</a>
+            </li>
+            <li>
+                <a href="https://github.com/Juanpablozim" class="footer-link" target="_blank">Juan Pablo Ramos</a>
+            </li>
+        </ul>
+    
+        <div id="footer_subscribe">  
+            <p>Cadastre seu e-mail para ficar por dentro das novidades !</p>
+            <div id="input_group">
+                <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+            </div>
+        </div>
+    </div>
+      
+    <div id="footer_copyright">
+        &#169 
+        2023 all rights reserved
+    </div>
+</footer>
+<!--Fim - Rodape-->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!------------------------------------------------------------------------------------>
+<script>
+    function imprimeDados() {
+        $.ajax({
+            url: 'http://localhost:6793/produto',
+            dataType: 'json', // Defina o tipo de dados esperado
+            success: function (data) {
+                // O parâmetro "data" já é um objeto JavaScript, não há necessidade de parse.
+                var denuncias = data;
+
+                // Construa o HTML dos destaques com base nas denúncias
+                var htmlDestacados = '';
+                for (var i = 0; i < denuncias.length; i++) {
+                    htmlDestacados += '<div class="destacado">';
+                    htmlDestacados += '<h4>' + denuncias[i].categoria + '</h4>';
+                    htmlDestacados += '<h2>' + denuncias[i].rua + ' '+ denuncias[i].numero +'</h2>';
+                    htmlDestacados += '<h3>' + denuncias[i].descricao + '</h3>';
+                    htmlDestacados += '</div></a>';
+                    htmlDestacados += '<br>';
+                }
+
+                // Preenche a div de destaques com o HTML gerado
+                $('#destacados').html(htmlDestacados);
+            },
+            error: function (error) {
+                console.error('Erro ao obter dados do servidor:', error);
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

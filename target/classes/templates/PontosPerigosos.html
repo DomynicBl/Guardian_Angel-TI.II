@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/reset.css" rel="stylesheet">
+    <link href="CSS/pontos.css" rel="stylesheet">
+    <title>G.A Denúncia</title>
+</head>
+
+<body onload="loadUser()">
+
+    <div clss="formSeguro" id="formPontoPerigoso">
+
+        <div class="inicial">
+            <a href="index.html"><img src="../../imgs/logo/White.png" alt="Login"></a>
+            <h1>Preencha os campos abaixo com as informações da sua denúncia</h1>
+        </div>
+
+        <div class="infos">
+            <div class="localização">
+                <h1>Insira a Localização:</h1>
+                <button class="botao" id="localizacaoAtual">Usar localização atual</button>
+            </div>
+
+            <form action="http://localhost:6793/produto" method="post" id="denunciaForm">
+                <div class="categoria_denuncia"> 
+                    <h1>Categoria da denúncia:</h1>
+                    <input list="categoria"  name="categoria" >
+                    <datalist id="categoria">
+                        <option value="Assédio"></option>
+                        <option value="Assalto"></option>
+                        <option value="Furto"></option>
+                        <option value="Aglomeração de Pessoas"></option>
+                        <option value="Comportamento Suspeito"></option>
+                        <option value="Rua Mal Iluminada"></option>
+                        <option value="Outros ..."></option>
+                    </datalist>
+                </div>
+            </div>
+
+            <div class="inputBox">
+                <input list="campoUF" class="formPonto" type="text"  name="estado" required><label class="labelPonto"
+                    for="campoUF">UF:
+                    <datalist id="campoUF">
+                        <option value="AC"></option>
+                        <option value="AL"></option>
+                        <option value="AP"></option>
+                        <option value="AM"></option>
+                        <option value="BA"></option>
+                        <option value="CE"></option>
+                        <option value="DF"></option>
+                        <option value="ES"></option>
+                        <option value="GO"></option>
+                        <option value="MA"></option>
+                        <option value="MT"></option>
+                        <option value="MS"></option>
+                        <option value="MG"></option>
+                        <option value="PA"></option>
+                        <option value="PB"></option>
+                        <option value="PR"></option>
+                        <option value="PE"></option>
+                        <option value="PI"></option>
+                        <option value="RJ"></option>
+                        <option value="RN"></option>
+                        <option value="RS"></option>
+                        <option value="RO"></option>
+                        <option value="RR"></option>
+                        <option value="SC"></option>
+                        <option value="SP"></option>
+                        <option value="SE"></option>
+                        <option value="TO"></option>
+                    </datalist>
+                </label>
+            </div>
+
+            <div class="inputBox">
+                <input class="formPonto" type="text" id="campoCidade" name="cidade" required><label class="labelPonto"
+                    for="campoCidade">Cidade:</label>
+            </div>
+
+            <div class="inputBox">
+                <input class="formPonto" type="text" id="campoBairro" name="bairro" required><label class="labelPonto"
+                    for="campoBairro">Bairro:</label>
+            </div>
+
+            <div class="inputBox">
+                <input class="formPonto" type="text" id="campoRua" name="rua" required><label class="labelPonto"
+                    for="campoRua">Logradouro:</label>
+            </div>
+
+            <div class="inputBox">
+                <input class="formPonto" type="text" id="campoNumero" name="numero" required><label class="labelPonto"
+                    for="campoNumero">Numero:</label>
+            </div>
+
+            <div class="inputBox">
+                <textarea class="formPontog" rows="2" cols="30" id="campo_descrição" name="descricao" required></textarea><label
+                    class="labelTA" for="campoMore">Informações do Ocorrido:</label>
+            </div>
+
+            <div id="msgenvio" class="msgenvio"></div>
+
+            <button type="submit" class="botao" id="enviar">Enviar</button>
+        </form>
+    </div>
+
+
+</body> 
+
+</html>

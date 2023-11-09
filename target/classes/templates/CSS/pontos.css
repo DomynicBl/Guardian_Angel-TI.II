@@ -1,0 +1,326 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-primaria);
+}
+
+#formPontoPerigoso {
+    color: var(--cor-secundaria);
+    position: absolute;
+    padding: 15px 3%;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inicial h1{
+    color: var(--cor-texto);
+    margin-bottom: 25px
+}
+
+.inicial img{
+    width: 120px;
+    margin-bottom: 50px;
+    object-fit: cover;
+}
+
+.localizacao button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.infos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.infos h1{
+    color: var(--cor-texto);
+    margin-bottom: 25px
+}
+
+.combinacaolado rua{
+    width: 100%;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+
+.categoria_denuncia input {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.categoria_denuncia h1{
+    color: var(--cor-texto);
+
+}
+
+.inputBox{
+    position: relative;
+    margin: 23px 0px;
+}
+
+.imputBox labelTA{
+}
+
+.inputBox imput{
+    color: var(--cor-texto_2);
+}
+
+.inputBox textarea{
+    color: var(--cor-texto_2);
+    height: 100px;
+    width: 99%;
+}
+
+.formPonto{
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--cor-secundaria);
+    outline: none;
+    color: var(--cor-terciaria);
+    font-size: 15px;
+    width: 100%;
+}
+
+.labelPonto {
+    font-size: 15px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.formPonto:focus ~ .labelPonto,
+.formPonto:valid ~ .labelPonto{
+    top: -20px;
+    font-size: 12px;
+    color: var(--cor-quarternaria);
+}
+
+.botao{
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.botaop {    
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.botao:hover{
+    border: solid var(--cor-terciaria) 1px;
+    background-image: linear-gradient(to right, var(--cor-primaria), var(--cor-primaria));;
+    color: var(--cor-terciaria);
+}
+
+.combinacao{
+    margin: 10px;
+}
+
+.combinacao input{
+    display: none;
+}
+
+.combinacao input + label:before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-quintenaria);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.combinacao input:checked + label:before{
+    background-color: var(--cor-primaria);
+    box-sizing: border-box;
+    border: 5px solid var(--cor-terciaria);
+    padding: 4px;
+}
+
+textarea{
+    margin-top: 10px;
+    resize: none;
+    background: none;
+    border: 1px solid var(--cor-secundaria);
+    outline: none;
+    color: var(--cor-terciaria);
+    font-size: 15px;
+}
+
+.labelTA {
+    font-size: 15px;
+    margin-top: 10px;
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.textarea:focus ~ .labelTA,
+.textarea:valid ~ .labelTA{
+    top: -20px;
+    font-size: 12px;
+    color: var(--cor-primaria);
+}
+
+h1{
+  color: var(--cor-terciaria);
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.ponto{
+  border: 1px solid var(--cor-terciaria);
+}
+
+.inicial{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.inicial a{
+  color: var(--cor-sextiaria);
+}
+
+#enviado{
+  color: var(--cor-primaria);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+
+
+
+
+.combinacaolado{
+    margin: 10px;
+    display: inline-block;
+}
+
+.combinacaolado input{
+    display: none;
+}
+
+.combinacaolado input + label:before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-quintenaria);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.combinacaolado input:checked + label:before{
+    background-color: var(--cor-primaria);
+    box-sizing: border-box;
+    border: 5px solid var(--cor-terciaria);
+    padding: 4px;
+}
+
+.msgenviado{
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 3px;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+}
+
+
+@media screen and (max-width: 600px) {
+    body{
+        background-color: var(--cor-primaria);
+    }
+    
+    .formPonto{
+        font-size: 10px;
+    }
+
+    .botao{
+        padding: 3px;
+    }
+
+    textarea{
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .labelTA {
+        font-size: 12px;
+    }
+
+    .labelPonto {
+        font-size: 12px;
+    }
+
+    .formPonto:focus ~ .labelPonto,
+    .formPonto:valid ~ .labelPonto{
+        top: -10px;
+        font-size: 10px;
+    }
+
+    .inputBox{
+        margin: 13px 0px;
+    }
+
+    .combinacaolado{
+        margin: 5px;
+        display: block;
+    }
+
+    .inicial{
+        font-size: 12px;
+    }
+
+    #formPontoPerigoso {
+        max-width: calc(70vh - 0px);
+        max-height: calc(100vh -30px);
+        background-color: transparent;
+    }
+}

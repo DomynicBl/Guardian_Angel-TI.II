@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>G.A Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="CSS/login.css" rel="stylesheet">
+  <link href="CSS/reset.css" rel="stylesheet"> 
+  <link href="imgs/logo/White.png" rel="icon">
+</head>
+
+<!------------------------------------------------------------------------------------>
+
+<!--Login-->
+<body>
+<form action="http://localhost:6793/usuario" method="GET" id="searchLogin">
+  <div class="main_login">
+    <div class="area_login">
+      <div class="card_login">
+        <a href="index.html"><img src="imgs/logo/White.png" alt="Login"></a>
+        <h1>Login</h1>       
+        <div class="campos_login">
+          <form id="register-form" action=""></form>
+          <label for="email">Email</label>
+          <input type="email" id="login" name="login" placeholder="Digite seu email">
+        </div>
+        <div class="campos_login">
+          <label for="lastname">Senha</label>
+          <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+        </div>
+        <button class="btn_login" type="submit" onclick="logado">Enviar</button>
+        <div class="cadastro">
+          <a href="cadastro.html">Não possui conta? Cadastre-se</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+<!--Fim - Login-->
+
+<!------------------------------------------------------------------------------------>
+
+ <!--
+	   <form action="http://localhost:6793/usuario" method="GET" id="searchLogin">
+        
+		<h1>Buscar</h1>
+        <label for="idBuscar">Buscar por ID:</label>
+        <input type="number" id="idBuscar" name="idBuscar" required>
+        <button type="button" onclick="obterDetalhes()">Obter Detalhes</button>
+        
+    </form>
+    
+
+    <script>
+        function logado() {
+            const form = document.getElementById("searchLogin");
+            var formData = new FormData(form);
+            var idDigitado = formData.get("login", "senha"); // Usando o novo campo de entrada
+
+            window.location.href = "http://localhost:6793/index.html";
+        }
+    </script>
+    -->
+
+</body>
+</html>
