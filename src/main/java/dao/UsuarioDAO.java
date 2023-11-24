@@ -67,11 +67,11 @@ public class UsuarioDAO {
 		    
 		    try {
 		        st = conexao.createStatement();
-		        String sql = "SELECT max(id) FROM users"; // Correct the SQL query to get the maximum user ID
+		        String sql = "SELECT max(id) FROM users"; 
 		        rs = st.executeQuery(sql);
 		        
 		        if (rs.next()) {
-		            maxId = rs.getInt(1); // Retrieve the maximum ID from the result set
+		            maxId = rs.getInt(1);
 		        }
 		    } catch (SQLException e) {
 		        System.err.println(e.getMessage());

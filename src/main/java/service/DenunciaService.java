@@ -29,7 +29,7 @@ public class DenunciaService{
 			jsonDenuncias.append("\"estado\":\"").append(denuncia.getEstado()).append("\",");
 			jsonDenuncias.append("\"rua\":\"").append(denuncia.getRua()).append("\",");
 			jsonDenuncias.append("\"numero\":\"").append(denuncia.getNumero()).append("\",");
-			jsonDenuncias.append("\"descricao\":\"").append(denuncia.getDescricao()).append("\"");
+			jsonDenuncias.append("\"descricao\":\"").append(denuncia.getDescricao().replace("\"", "'")).append("\"");
 			jsonDenuncias.append("},");
 		}
 		// Remova a vírgula extra se houver denúncias
@@ -52,7 +52,6 @@ public class DenunciaService{
 		denunciaDAO.conectar();
 		Session session  = request.session(true);                    
 		 
-		session.attribute("user", 1);
 		int id = denunciaDAO.getMaxId() + 1;
 		String cidade = request.queryParams("cidade");
 		String bairro = request.queryParams("bairro");
@@ -61,7 +60,7 @@ public class DenunciaService{
 		String numero = request.queryParams("numero");
 		String descricao = request.queryParams("descricao");
 		String categoria = request.queryParams("categoria");
-		String data = "28/10/2023";
+		String data = "24/11/2023";
 		int idUsuario = session.attribute("user");
 	
 		Denuncia denuncia = new Denuncia(id, cidade, bairro, estado, rua, numero, descricao, categoria, data, idUsuario);

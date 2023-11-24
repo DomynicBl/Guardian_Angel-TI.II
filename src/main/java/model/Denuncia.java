@@ -12,15 +12,17 @@ public class Denuncia {
     private String data;
     private int idUsuario;
 
-    public Denuncia(int id, String cidade, String bairro, String estado, String rua, String numero, String descricao, String categoria, String data, int idUsuario) {
+    public Denuncia(int id, String cidade, String bairro, String estado, String rua, 
+        String numero, String descricao, String categoria, String data, int idUsuario) {
+            
         this.id = id;
-        this.cidade = cidade.toUpperCase();
-        this.bairro = bairro.toUpperCase();
-        this.estado = estado.toUpperCase();
-        this.rua = rua.toUpperCase();
+        this.cidade = cidade.toUpperCase().replace("'", "\"");
+        this.bairro = bairro.toUpperCase().replace("'", "\"");
+        this.estado = estado.toUpperCase().replace("'", "\"");
+        this.rua = rua.toUpperCase().replace("'", "\"");
         this.numero = numero;
-        this.descricao = descricao;
-        this.categoria = categoria;
+        this.descricao = descricao.replace("'", "\"").replace(";", ".").toUpperCase();
+        this.categoria = categoria.replace("'", "\"");
         this.data = data;
         this.idUsuario = idUsuario;
     }

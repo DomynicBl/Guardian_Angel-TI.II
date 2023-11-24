@@ -60,6 +60,7 @@ body {
     margin: 7% auto 0;
     border-radius: 6px;
     border: 2px solid var(--cor-primaria);
+    margin-bottom: 60px;
 }
 
 .row {
@@ -96,6 +97,15 @@ button i {
     color: var(--cor-texto);
 }
 
+.result-box {
+    width: 65%; 
+    margin: 0 auto; 
+}
+
+.result-box div.destacado {
+    margin-bottom: 0px;
+}
+
 .result-box ul {
     text-align: center;
     background-color: var(--cor-secundaria);
@@ -106,7 +116,6 @@ button i {
     width: 60%;
     height: 100%;
 }
-
 
 .result-box ul li {
     border-bottom: 2px solid var(--cor-primaria);

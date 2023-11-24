@@ -1,0 +1,267 @@
+
+#denunciasPontosPerigosos{
+    color: var(--cor-texto_2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+/*
+  NAVBAR
+*/
+.espaco-navbar {
+    margin-top: 70px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-primaria);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.navitem {
+    overflow: hidden;
+    max-height: 30px;
+    max-width: 50px;
+    padding: 10px 50px 10px 50px;
+    font-size: 30px;
+    color: var(--cor-secundaria);
+}
+
+.navlogged {
+    padding: 10px 50px 10px 0px;
+    font-size: 18px;
+}
+
+.btnnavbar {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.aplicacoes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* CORPO */
+/*
+    USUARIO
+*/
+
+.foto {
+    text-align: center;
+}
+
+.userAvatar {
+    width: 20vmin;
+    height: 20vmin;
+    padding: 5vmin;
+    border-radius: 50%;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    font-size: 20vmin;
+}
+
+.name {
+    font-size: 5vmin;
+    text-align: center;
+}
+
+
+.email {
+    color: var(--cor-quarternaria);
+    margin-top: 5px;
+    font-size: 5vmin;
+    text-align: center;
+}
+
+.denunciasP {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    /*max-height: calc(50vh - 30px);*/
+    /*overflow-y: scroll;*/
+}
+
+/*
+    DENUNCIAR
+*/
+.aplicacoes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* botao de denuncia */
+.btncadastrar {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--cor-secundaria);
+    width: 350px;
+    border: none;
+    background-color: var(--cor-primaria);
+    height: 40px;
+    border-radius: 30px;
+}
+
+/*
+    LOGOFF
+*/
+.logoff {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.btnlogoff {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--cor-quarternaria);
+    color: var(--cor-secundaria);
+}
+
+/*
+    DECUNCIAS
+*/
+
+.suasdenuncias {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 5vmin;
+    color: var(--cor-primaria);
+}
+
+.identificador {
+    text-align: center;
+    font-size: 3vmin;
+    color: var(--cor-quarternaria);
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.destacado {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--cor-secundaria);
+    border: 3px solid var(--cor-quarternaria);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.denunciasP h2 {
+    text-align: center;
+    color: var(--cor-quarternaria);
+    font-size: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--cor-quarternaria);
+}
+
+.denunciasP h3 {
+    text-align: center;
+    color: rgb(27, 27, 27);
+    font-size: 14px;
+}
+
+.denunciasP h4 {
+    color: var(--cor-primaria);
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.denunciasP h5 {
+    font-size: 20px;
+    text-align: center;
+    color: var(--cor-terciaria);
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--cor-quarternaria);
+}
+
+/* MOTORISTAS */
+.motorista {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+.denunciaM {
+    max-height: calc(50vh - 30px);
+    overflow-y: scroll;
+}
+*/
+
+.denunciasM {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.denunciasM .info {
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 10px;
+}
+
+.denunciasM .descricao {
+    color: #555;
+}
+
+/*
+  RODAPÉ
+*/
+.rodape {
+  padding: 30px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  display: flex;
+  align-items: center;
+}
+
+.rodape .tipo{
+  display: inline-block;  
+}
+
+.rodape .tipo h1{
+  color: (var(--cor-quarternaria));
+  font-size: 14px;
+}
+
+.mensagem,
+.autores {
+    flex-basis: 50%;
+    text-align: center;
+    margin: 0;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 1201px) {
+    .denunciasP h3 {
+        font-size: 20px;
+    }
+
+    .denunciasP h2 {
+        font-size: 24px;
+    }
+}

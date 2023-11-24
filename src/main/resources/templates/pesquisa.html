@@ -22,13 +22,13 @@
 <div class="header" id="header">
     <div class="logo_header">
         <a href="./index.html">
-            <img src="../../imgs/logo/White.png" alt="Login">
+            <img src="imgs/logo/White.png" alt="Login">
         </a>
     </div>  
   
     <div class="menu">
-        <a href="users/central.html">
-            <img src="../../imgs/cabecalho/usuario.png" alt="Usuário">
+        <a href="login.html">
+            <img src="imgs/cabecalho/usuario.png" alt="Usuário">
         </a>
     </div>
 </div>
@@ -81,10 +81,14 @@
     
             const enderecoElement = document.createElement('h2');
             enderecoElement.textContent = result.rua + ' ' + result.numero; 
+            enderecoElement.style.marginTop = '5px';
+            enderecoElement.style.marginLeft = '7px';
             resultElement.appendChild(enderecoElement);
     
             const descricaoElement = document.createElement('h3');
             descricaoElement.textContent = result.descricao;
+            descricaoElement.style.marginTop = '15px';
+            descricaoElement.style.marginLeft = '7px';
             resultElement.appendChild(descricaoElement);
     
             
@@ -99,6 +103,9 @@
     document.getElementById('btnclean').addEventListener('click', search);
     
     document.getElementById('input-box').addEventListener('keyup', search);
+
+    
+    
     </script>
     
     
