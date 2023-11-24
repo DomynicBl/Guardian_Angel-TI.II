@@ -35,11 +35,11 @@ public class Aplicacao {
         post("/produto", (request, response) -> denunciaService.add(request, response));
         	
 
-        // Metodo get pra pegar uma denuncia especifica pelo ID
-        get("/produto/:id", (request, response) -> denunciaService.get(request, response));
+        // Metodo get pra pegar uma denuncia especifica pelo parametro de pesquisa
+        get("/produto/:pesquisa", (request, response) -> denunciaService.get(request, response));
         /*get("/produto/update/:id", (request, response) -> tarefaService.update(request, response));*/
 
-        get("/produto/delete/:id", (request, response) -> denunciaService.delete(request, response));
+        //get("/produto/delete/:id", (request, response) -> denunciaService.delete(request, response));
 
         get("/produto", (request, response) -> denunciaService.getAll(request, response));
                

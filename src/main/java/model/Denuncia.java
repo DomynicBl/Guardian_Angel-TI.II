@@ -14,10 +14,10 @@ public class Denuncia {
 
     public Denuncia(int id, String cidade, String bairro, String estado, String rua, String numero, String descricao, String categoria, String data, int idUsuario) {
         this.id = id;
-        this.cidade = cidade;
-        this.bairro = bairro;
-        this.estado = estado;
-        this.rua = rua;
+        this.cidade = cidade.toUpperCase();
+        this.bairro = bairro.toUpperCase();
+        this.estado = estado.toUpperCase();
+        this.rua = rua.toUpperCase();
         this.numero = numero;
         this.descricao = descricao;
         this.categoria = categoria;

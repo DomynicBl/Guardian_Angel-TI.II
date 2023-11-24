@@ -102,15 +102,16 @@ public class DenunciaDAO {
 	}
 	
 	
-	public Denuncia get(int id) {
-		Denuncia denuncia = null;
+	public List<Denuncia> get(String pesquisa) {
+		List<Denuncia> denuncias = new ArrayList<>();
 	
 		try {
 			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-			String sql = "SELECT * FROM denuncias WHERE id=" + id;
+			String sql = "SELECT * FROM denuncias WHERE bairro= '" + pesquisa.toUpperCase() + "' OR estado = '" 
+			+ pesquisa.toUpperCase() + "' OR cidade = '" + pesquisa.toUpperCase() + "'";
 			ResultSet rs = st.executeQuery(sql);
-			if (rs.next()) {
-				denuncia = new Denuncia(rs.getInt("id"),
+			while (rs.next()) {
+				Denuncia denuncia = new Denuncia(rs.getInt("id"),
 						rs.getString("cidade"),
 						rs.getString("bairro"),
 						rs.getString("estado"),
@@ -120,12 +121,13 @@ public class DenunciaDAO {
 						rs.getString("categoria"),
 						rs.getString("data"),
 						rs.getInt("idUsuario"));
+				denuncias.add(denuncia);
 			}
 			st.close();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}
-		return denuncia;
+		return denuncias;
 	}
 	
 	

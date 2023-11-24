@@ -10,7 +10,7 @@
   <link href="CSS/footer.css" rel="stylesheet">
   <link href="CSS/reset.css" rel="stylesheet">
   <link href="CSS/pesquisa.css" rel="stylesheet">
-  <link href="imgs/logo/White.png" rel="icon"">
+  <link href="imgs/logo/White.png" rel="icon">
   <script src="https://kit.fontawesome.com/525c49cbb7.js" crossorigin="anonymous"></script>
 </head>
 
@@ -48,6 +48,59 @@
         
     </div>
    
+<!------------------------------------------------------------------------------------>
 
-</body>
-</html>
+<!-- Seu script Fetch API -->
+<script>
+    function search() {
+        const searchTerm = document.getElementById('input-box').value;
+    
+        // Certifique-se de substituir 'url-do-backend' pela URL real do seu back-end
+        fetch(`http://localhost:6793/produto/` + searchTerm)
+            .then(response => response.json())
+            .then(data => {
+                // Manipule os dados recebidos do back-end, por exemplo, exibindo na div 'result-box'
+                displayResults(data);
+            })
+            .catch(error => console.error('Erro ao fazer a solicitação:', error));
+    }
+    
+    function displayResults(data) {
+        
+        
+        const resultBox = document.querySelector('.result-box');
+        resultBox.innerHTML = ""; 
+    
+        data.forEach(result => {
+            const resultElement = document.createElement('div');
+            resultElement.classList.add('destacado');
+    
+            
+            const categoriaElement = document.createElement('h4');
+            categoriaElement.textContent = result.categoria; 
+    
+            const enderecoElement = document.createElement('h2');
+            enderecoElement.textContent = result.rua + ' ' + result.numero; 
+            resultElement.appendChild(enderecoElement);
+    
+            const descricaoElement = document.createElement('h3');
+            descricaoElement.textContent = result.descricao;
+            resultElement.appendChild(descricaoElement);
+    
+            
+            resultBox.appendChild(resultElement);
+    
+           
+            const brElement = document.createElement('br');
+            resultBox.appendChild(brElement);
+        });
+    }
+    
+    document.getElementById('btnclean').addEventListener('click', search);
+    
+    document.getElementById('input-box').addEventListener('keyup', search);
+    </script>
+    
+    
+    </body>
+    </html>

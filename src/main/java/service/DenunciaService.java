@@ -75,11 +75,20 @@ public class DenunciaService{
 	}
 	
 	 
-    public Object get(Request request, Response response) {
+	public String get(Request request, Response response) {
         denunciaDAO.conectar();
-        int id = Integer.parseInt(request.params(":id"));		
-		Denuncia denuncia =  denunciaDAO.get(id);
-        return denuncia;
+        String pesquisa = request.params(":pesquisa");		
+        List<Denuncia> denuncias =  denunciaDAO.get(pesquisa);
+        
+        String json = processarDenuncias(denuncias);
+		response.header("Access-Control-Allow-Origin", "*");
+		
+		// Configura o tipo de conteúdo da resposta como JSON
+		response.type("application/json");
+				
+		// Configura o corpo da resposta com o JSON gerado
+		response.body(json);
+        return json;
     }
     
     public String getAll(Request request, Response response) {
@@ -102,7 +111,7 @@ public class DenunciaService{
 		return json;
 	}
 
-	public Object delete(Request request, Response response) {
+	/*public Object delete(Request request, Response response) {
         int id = Integer.parseInt(request.params(":id"));
         Denuncia denuncia = denunciaDAO.get(id);
         String resp = "";       
@@ -116,6 +125,6 @@ public class DenunciaService{
             resp = "Produto (" + id + ") não encontrado!";
         }
 		return resp;
-	}
+	}*/
 	
 }

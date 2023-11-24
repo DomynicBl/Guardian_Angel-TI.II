@@ -21,7 +21,7 @@ public class UsuarioDAO {
 	//Conectar ao Banco de Dados
 		public boolean conectar() {
 			String driverName = "org.postgresql.Driver";                    
-			String serverName = "localhost";
+			String serverName = "localhost"; 
 			String mydatabase = "WAusers";
 			int porta = 5432;
 			
