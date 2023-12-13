@@ -1,0 +1,40 @@
+Tabela de Usuários:
+
+CREATE TABLE IF NOT EXISTS public.users
+(
+    id integer NOT NULL,
+    nome text COLLATE pg_catalog."default" NOT NULL,
+    login text COLLATE pg_catalog."default" NOT NULL,
+    senha text COLLATE pg_catalog."default",
+    nivel_acesso integer,
+    CONSTRAINT users_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.users
+    OWNER to ti2cc;
+
+===========================================================
+
+Tabela de Denúncias:
+
+CREATE TABLE IF NOT EXISTS public.denuncias
+(
+    id integer NOT NULL,
+    categoria text COLLATE pg_catalog."default",
+    cidade text COLLATE pg_catalog."default",
+    bairro text COLLATE pg_catalog."default",
+    estado text COLLATE pg_catalog."default",
+    rua text COLLATE pg_catalog."default",
+    numero integer,
+    descricao text COLLATE pg_catalog."default",
+    "idUsuario" integer DEFAULT 1,
+    data date,
+    CONSTRAINT denuncias_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.denuncias
+    OWNER to postgres;
