@@ -29,11 +29,11 @@ Requisitos Prévios:
 - Java Development Kit (JDK) instalado.
 - PostgreSQL instalado localmente.
 
-- 1º Passo: Clone esse repositório, utilizando o comando "git clone https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-2023-2-ti2-g04-guardianangel.git".
+- 1º Passo: Clone esse repositório, utilizando o comando "git clone https://github.com/DomynicBl/Guardian_Angel-TI.II.git" ou "git clone https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-2023-2-ti2-g04-guardianangel.git".
 - 2º Passo: Crie um banco de dados com PostegreSql, utilizando o códigos no arquivo "Criação das Tabelas.txt" que foi clonada.
 - 3º Passo: Acesse a aplicacão no caminho "Aplicacao.app Guardian_Angel-TI.II\src\main\java\app".
 - 4º Passo: Certifique-se que tanto o banco de dados quanto a aplicação estejam rodando localmente.
-- A partir de agora será possível explorar o projeto desenvolvido, fazendo cadastro e login, criando e consultando denuncias, mais explicações sobre a utilização do projeto estão no vídeo:"https://www.youtube.com/watch?v=a8M28HyDRX4"
+- A partir de agora será possível explorar o projeto desenvolvido, fazendo cadastro e login, criando e consultando denuncias, mais explicações sobre a utilização do projeto estão no vídeo:"https://www.youtube.com/watch?v=a8M28HyDRX4".
 
 
 Fique à vontade para explorar o código-fonte e colaborar neste projeto em constante evolução.
